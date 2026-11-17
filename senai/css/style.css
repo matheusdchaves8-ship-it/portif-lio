@@ -1,0 +1,258 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    color: #171717;
+}
+
+header {
+    background-color: #111111;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+}
+
+header h1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #d4af37;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #d4af37;
+}
+
+.sobre {
+    background-color: #111111;
+    color: white;
+    padding: 85px 10%;
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sobre h2 {
+    font-size: 42px;
+    font-weight: 800;
+    color: #d4af37;
+    margin-bottom: 15px;
+}
+
+.sobre p {
+    font-size: 16px;
+    line-height: 1.8;
+    max-width: 600px;
+    margin-bottom: 12px;
+    color: #e0e0e0;
+}
+
+.habilidades {
+    padding: 65px 10%;
+    text-align: center;
+    background-color: white;
+}
+
+.habilidades h2,
+.projetos h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 35px;
+}
+
+.habilidades h2::after,
+.projetos h2::after {
+    content: '';
+    display: block;
+    width: 75px;
+    height: 4px;
+    background-color: #d4af37;
+    margin: 8px auto 0;
+    border-radius: 5px;
+}
+
+.lista-habilidades {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.habilidade {
+    background-color: #fafafa;
+    padding: 25px 15px;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.habilidade:hover {
+    transform: translateY(-8px);
+    border-color: #d4af37;
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.2);
+}
+
+.habilidade h3 {
+    font-size: 17px;
+    color: #b8860b;
+    margin-bottom: 10px;
+}
+
+.habilidade p {
+    font-size: 13px;
+    color: #555555;
+    line-height: 1.6;
+}
+
+.projetos {
+    background-color: #f8f8f8;
+    padding: 65px 10%;
+    text-align: center;
+}
+
+.projetos > p {
+    color: #555555;
+    margin-bottom: 30px;
+}
+
+.lista-projetos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.projeto {
+    background-color: white;
+    padding: 30px;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    text-align: left;
+    transition: 0.3s;
+}
+
+.projeto:hover {
+    transform: translateY(-5px);
+    border-color: #d4af37;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.projeto h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #111111;
+}
+
+.projeto p {
+    font-size: 14px;
+    color: #555555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.projeto a {
+    display: inline-block;
+    background-color: #d4af37;
+    color: #111111;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.projeto a:hover {
+    background-color: #b8962e;
+}
+
+footer {
+    background-color: #111111;
+    color: #dddddd;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+footer p {
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+footer p:last-child {
+    color: #d4af37;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    nav ul {
+        gap: 18px;
+    }
+
+    .sobre {
+        padding: 60px 7%;
+        text-align: center;
+        align-items: center;
+    }
+
+    .sobre h2 {
+        font-size: 32px;
+    }
+
+    .habilidades,
+    .projetos {
+        padding: 50px 7%;
+    }
+
+    .lista-habilidades {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .lista-projetos {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 400px) {
+    .lista-habilidades {
+        grid-template-columns: 1fr;
+    }
+
+    nav ul {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+}
